@@ -1,0 +1,8 @@
+output
+log.html
+output.xml
+report.html
+geckodriver-*.log
+selenium-screenshot-*.png
+venv
+.idea
