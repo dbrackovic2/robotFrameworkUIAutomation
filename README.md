@@ -58,3 +58,10 @@ To install a package click on a `+` button.
 ## Report generation
 * To run allure reporter locally:
   `allure serve ./output/allure/`
+  
+## Clean report folder
+* To clean report folder content run:
+  `rm -rf ./output/allure/*`
+  
+## Video recording of test execution
+![klikawebautomationwithrobot.gif](klikawebautomationwithrobot.gif)
