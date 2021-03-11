@@ -16,6 +16,7 @@ In case you are using an OS that doesn't come with Python3, it will be required 
 
 * **Python3** - has to be installed in order to install pip3
   * python3 installation verification: `python3 --version`
+* **Java** - only required for opening Allure report, it's not needed for test execution
 * **PyCharm IDE Community Edition**
 * **Pip3**:
     * Pip3 installation command:
