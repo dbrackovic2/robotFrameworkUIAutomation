@@ -1,8 +1,8 @@
-# KlikaWebAutomation_RobotFramework
+# UIWebAutomation_RobotFramework_SeleniumLibrary
 
 ## Description
 
-This is project containing automated tests for `www.Klika.ba` website.
+This is project containing automated tests for IT company website.
 The project uses Robot framework and SeleniumLibrary for web UI automation.
 Since Robot framework is convenient not only for UI testing, but also for API and E2E testing,
 the project can be easily extended to cover API of the application.
@@ -52,7 +52,7 @@ To install a package click on a `+` button.
   
 ## Test execution
 * To run a specific test use:
-  `robot --listener allure_robotframework ./TestCases/KlikaHomePageTest.robot`
+  `robot --listener allure_robotframework ./TestCases/HomePageTest.robot`
 * To run all test from the TestCases folder use:
   `robot --listener allure_robotframework ./TestCases/`
 
@@ -65,4 +65,4 @@ To install a package click on a `+` button.
   `rm -rf ./output/allure/*`
   
 ## Video recording of test execution
-![klikawebautomationwithrobot.gif](klikawebautomationwithrobot.gif)
+![webautomationwithrobot.gif](webautomationwithrobot.gif)

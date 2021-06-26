@@ -1,5 +1,5 @@
 *** Settings ***
-Library  SeleniumLibrary
+Library         SeleniumLibrary         plugins=/home/joda/PycharmProjects/klikaRobotWebAutomation/Resources/AllureSeleniumPlugin.py
 Library  Collections
 Variables  ../PageObjects/Locators.py
 
@@ -10,18 +10,26 @@ Open url in browser
     Maximize Browser Window
     sleep   1
     Click Element   ${acceptCookieBtn}
+    Capture Page Screenshot
 
 Verify home page is opened
     Wait Until Element is Visible   ${homeLogoBtn}
     Title Should Be    Klika
+    Capture Page Screenshot
 
 Navigate Through What We Do pages
     Open All Services page
+    Capture Page Screenshot
     Open Agile Product & Design page
+    Capture Page Screenshot
     Open Engineering page
+    Capture Page Screenshot
     Open Digital Transformation page
+    Capture Page Screenshot
     Open Advanced Technologies & Innovation page
+    Capture Page Screenshot
     Open Penetration Testing page
+    Capture Page Screenshot
 
 Open All Services page
     @{options}=     Get WebElements  ${navbarOptions}
@@ -40,6 +48,7 @@ Open All Services page
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -61,6 +70,7 @@ Open Agile Product & Design page
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -82,6 +92,7 @@ Open Engineering page
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -103,6 +114,7 @@ Open Digital Transformation page
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -124,6 +136,7 @@ Open Advanced Technologies & Innovation page
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -145,15 +158,18 @@ Open Penetration Testing page
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
+    Capture Page Screenshot
 
 Open About page
     @{options}=     Get WebElements  ${navbarOptions}
     ${about}=       Get From List   ${options}  0
     sleep   1
     Click Element   ${about}
+    Capture Page Screenshot
     sleep   1
 
 Open Careers page
@@ -161,6 +177,7 @@ Open Careers page
     ${careers}=       Get From List   ${options}  2
     sleep   1
     Click Element   ${careers}
+    Capture Page Screenshot
     sleep   1
 
 Open Culture page
@@ -168,6 +185,7 @@ Open Culture page
     ${culture}=       Get From List   ${options}  3
     sleep   1
     Click Element   ${culture}
+    Capture Page Screenshot
     sleep   1
 
 Open Blog page
@@ -175,6 +193,7 @@ Open Blog page
     ${blog}=       Get From List   ${options}  4
     sleep   1
     Click Element   ${blog}
+    Capture Page Screenshot
     sleep   1
 
 Open News Room page
@@ -182,6 +201,7 @@ Open News Room page
     ${newsroom}=       Get From List   ${options}  5
     sleep   1
     Click Element   ${newsroom}
+    Capture Page Screenshot
     sleep   1
 
 Open Give Back page
@@ -189,6 +209,7 @@ Open Give Back page
     ${giveback}=       Get From List   ${options}  6
     sleep   1
     Click Element   ${giveback}
+    Capture Page Screenshot
     sleep   1
 
 Verify About page content
@@ -207,6 +228,7 @@ Verify About page content
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     sleep   1
 
@@ -221,6 +243,7 @@ Verify Careers page content
         ${text}=     Get Text   ${i}
         Log to console   ${text}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -240,6 +263,7 @@ Verify Blog page content
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -255,6 +279,7 @@ Verify News Room page content
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -270,6 +295,7 @@ Verify Give Back page content
         ${y}=   Evaluate    ${x}*${n}
         Execute JavaScript   document.querySelector('body').scrollTop = ${y}
         ${x}=   Evaluate    ${x}+1
+        Capture Page Screenshot
     END
     Execute JavaScript  document.querySelector('body').scrollTop = document.body.scrollHeight
     sleep   1
@@ -278,6 +304,7 @@ Scroll through sections
     @{sections}=    Get WebElements     ${rightNavMenuOptions}
     FOR   ${i}    IN  @{sections}
        Click Element   ${i}
+       Capture Page Screenshot
        sleep   2
     END
 
